@@ -4,7 +4,7 @@ A free, open-source Chrome extension that shows **company tags for NeetCode prob
 
 If you're grinding NeetCode's free problem list for interview prep and wondering *"which companies actually ask this question?"*, this extension answers that without needing a LeetCode Premium subscription.
 
-![NeetCode Company Tags demo](docs/screenshot.png)
+![NeetCode Company Tags demo](docs/screenshot.PNG)
 
 ---
 
