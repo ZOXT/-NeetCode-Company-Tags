@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "NeetCode Company Tags",
+  "version": "1.0.0",
+  "description": "Shows which companies have asked each problem while you solve it on NeetCode, using community-sourced LeetCode company-tag data.",
+  "homepage_url": "https://github.com/ZOXT/-NeetCode-Company-Tags",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["https://neetcode.io/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://neetcode.io/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["data/problems.json", "data/meta.json"],
+      "matches": ["https://neetcode.io/*"]
+    }
+  ]
+}
